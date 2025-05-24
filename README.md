@@ -1,5 +1,5 @@
 # 5060STUDY
-NVIDIA RTX 5060 ti 12G Study CUDA and LLM articles series
+NVIDIA RTX 5060 ti 12G Study CUDA and LLM article series
 
 ![](5060StudyCUDA/01/pic/01.png)
 
