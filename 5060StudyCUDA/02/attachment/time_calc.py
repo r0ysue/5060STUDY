@@ -4,10 +4,10 @@ from pycuda import gpuarray
 from time import time
 
 
-host_data = np.float32(np.random.random(500000000))
+host_data = np.float32(np.random.random(600000000))
 
 t1 = time()
-host_data_2x = host_data * np.float32(2)
+host_data_2x = host_data * np.float32(4) * np.float32(5)
 t2 = time()
 
 print('total time to compute on CPU: %f' % (t2 - t1))
@@ -15,7 +15,7 @@ print('total time to compute on CPU: %f' % (t2 - t1))
 device_data = gpuarray.to_gpu(host_data)
 
 t1 = time()
-device_data_2x = device_data * np.float32(2)
+device_data_2x = device_data * np.float32(4) * np.float32(5)
 t2 = time()
 
 from_device = device_data_2x.get()
